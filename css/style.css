@@ -84,6 +84,43 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+
+#xmlData {
+  font-family: monospace;
+  font-size: 0.9em;
+  white-space: pre;
+  overflow: auto;
+  margin: 0 auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  height: 60vh;
+  width: 95%;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
