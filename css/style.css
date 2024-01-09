@@ -99,25 +99,91 @@ textarea {
   margin-top: 20px;
 }
 
+nav a {
+  text-decoration: none;
+  color: #000;
+  border-right: 1px solid #000;
+  padding: 0 5%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
 
+nav {
+  display: flex;
+  justify-content: center;
+}
 
+nav a:last-child {
+  border-right: none;
+}
 
+#filePickerBtn {
+  width: 200px;
+  height: 100px;
+  font-size: 14px;
+  border: none;
+  background-color: #919191;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  transition-duration: 0.4s;
+  cursor: pointer;
 
+}
 
+#filePickerBtn:hover {
+  background-color: #717171;
+}
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 20px;
+}
+.grid1, .grid2 {
+  margin: 0 auto;
+}
 
+#title, #description {
+  width: 100%;
+}
 
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  color: white;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.arrow-left {
+  left: 10px;
+  z-index: 1;
+}
+.arrow-right {
+  right: 10px;
+}
+.slider-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.slider-track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  width: 300%;
+}
+.slide {
+  width: 100vw;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
 
 
 
