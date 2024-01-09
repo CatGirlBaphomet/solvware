@@ -25,20 +25,24 @@ if(isset($_FILES['fileToUpload'])){
         // Load and return the XML content
         $xml = simplexml_load_file("uploads/".$file_name);
 
-        // Database operations
-        $title = $_POST["title"];
-        $description = $_POST["description"];
+    // Database operations
+    $title = $_POST["title"];
+    $description = $_POST["description"];
 
-        $sql = "INSERT INTO MyTable (title, description, file) VALUES (?, ?, ?)";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $title, $description, $xml->asXML());
-        $stmt->execute();
-
-        $stmt->close();
-        $conn->close();
-
+    $sql = "INSERT INTO MyTable (title, description, file) VALUES (?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $xmlContent = $xml->asXML();
+    $stmt->bind_param("sss", $title, $description, $xmlContent);
+    $stmt->execute();
+    if ($stmt->affected_rows > 0) {
         echo "Data saved successfully";
     } else {
+        echo "Failed to save";
+    }
+
+    $stmt->close();
+    $conn->close();
+} else {
         echo implode(", ", $errors);
     }
 }

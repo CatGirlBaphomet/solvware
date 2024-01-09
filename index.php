@@ -42,6 +42,7 @@
         <textarea id="description" name="description" rows="4" cols="50" placeholder="Description"></textarea>
         <button type="button" id="saveBtn">Save</button>
         </form>
+        <div id="message"></div>
       </div>
     </div>
   </header>

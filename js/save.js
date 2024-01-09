@@ -13,9 +13,10 @@ document.getElementById('saveBtn').addEventListener('click', function() {
   xhr.onload = function () {
       if (xhr.status === 200) {
           // Data saved successfully
-          console.log(this.responseText);
+          document.getElementById('message').textContent = this.responseText;
       } else {
           console.error('An error occurred during the transaction');
+          document.getElementById('message').textContent = 'An error occurred';
       }
   };
   xhr.send(formData);
