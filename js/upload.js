@@ -30,3 +30,6 @@ document.getElementById('fileToUpload').addEventListener('change', function() {
 
   xhr.send(formData);
 });
+document.getElementById('filePickerBtn').addEventListener('click', function() {
+  document.getElementById('fileToUpload').click();
+});
