@@ -26,23 +26,25 @@
   <nav>
 
   </nav>
-  <form action="upload.php" method="post" enctype="multipart/form-data">
+  <form action="upload.php" method="post" enctype="multipart/form-data" id="uploadForm">
     Select XML file to upload:
     <input type="file" name="fileToUpload" id="fileToUpload">
-    <input type="submit" value="Upload XML" name="submit">
     <br>
     <label for="title">Title:</label>
     <input type="text" id="title" name="title">
     <br>
     <label for="description">Description:</label>
     <input type="text" id="description" name="description">
-  </form>
+</form>
 </header>
 <main>
-
-
-</main>
+<div id=xmlUrl></div>
+<div id="xmlData">
+    <?php include 'upload.php'; ?>
+</div>
+  </main>
   <script src="js/app.js"></script>
+  <script src="js/upload.js"></script>
 
 </body>
 
