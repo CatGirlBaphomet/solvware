@@ -8,6 +8,7 @@ class Slider {
 
     this.setupEventListeners();
     this.showSlide(this.currentIndex);
+    this.autoSlide();
   }
 
   showSlide(index) {
@@ -25,6 +26,11 @@ class Slider {
     this.showSlide(this.currentIndex);
   }
 
+  autoSlide() {
+    setInterval(() => {
+      this.nextSlide();
+    }, 3000);
+  }
 
   setupEventListeners() {
     document.querySelector('.slider-container .arrow-left').addEventListener('click', () => {
